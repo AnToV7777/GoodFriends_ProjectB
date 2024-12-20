@@ -1,4 +1,5 @@
 {
     "appService.defaultWebAppToDeploy": "",
-    "appService.deploySubpath": "AppGoodFriendsWebApi/publish"
+    "appService.deploySubpath": "AppGoodFriendsWebApi/publish",
+    "liveServer.settings.port": 5501
 }

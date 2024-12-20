@@ -80,13 +80,12 @@ public class FriendsDbRepos
     {
             var parameters = new List<SqlParameter>();
 
-            var retValue = new SqlParameter("retval", SqlDbType.Int) { Direction = ParameterDirection.Output };
+             var retValue = new SqlParameter("retval", SqlDbType.Int) { Direction = ParameterDirection.Output };
             var seededArg = new SqlParameter("seeded", seeded);
             var nrF = new SqlParameter("nrF", SqlDbType.Int) { Direction = ParameterDirection.Output };
             var nrA = new SqlParameter("nrA", SqlDbType.Int) { Direction = ParameterDirection.Output };
             var nrP = new SqlParameter("nrP", SqlDbType.Int) { Direction = ParameterDirection.Output };
             var nrQ = new SqlParameter("nrQ", SqlDbType.Int) { Direction = ParameterDirection.Output };
-
             parameters.Add(retValue);
             parameters.Add(seededArg);
             parameters.Add(nrF);
@@ -106,7 +105,7 @@ public class FriendsDbRepos
             GstUsrInfoDbDto result_set = _query.FirstOrDefault();
             //gstusrInfoDbDto result_set = _query.ToList()[0];  //alternative to show you get List
 
-            //Check the return code
+            //Check the return code 
             int retCode = (int)retValue.Value;
             if (retCode != 0) throw new Exception("supusr.spDeleteAll return code error");
             #endregion
